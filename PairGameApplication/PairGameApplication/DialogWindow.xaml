@@ -1,0 +1,22 @@
+﻿<Window x:Class="PairGameApplication.DialogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Custom" Height="150" Width="250">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Content="n:"/>
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="nTextBox"/>
+        <Label Grid.Row="1" Grid.Column="0" Content="m:"/>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="mTextBox"/>
+        <Button Grid.Row="2" Grid.Column="0" Content="Confirm" Margin="5" Click="ConfirmButton_Click"/>
+        <Button Grid.Row="2" Grid.Column="1" Content="Cancel" Margin="5" Click="CancelButton_Click"/>
+    </Grid>
+</Window>

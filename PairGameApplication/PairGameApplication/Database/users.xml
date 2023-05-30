@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfUser xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <User>
+    <username>ana</username>
+    <avatarImage>pack://application:,,,/PairGameApplication;component/Assets/AvatarImages/avatar2.png</avatarImage>
+    <gamesPlayed>7</gamesPlayed>
+    <gamesWon>2</gamesWon>
+  </User>
+  <User>
+    <username>ah</username>
+    <avatarImage>pack://application:,,,/PairGameApplication;component/Assets/AvatarImages/avatar1.png</avatarImage>
+    <gamesPlayed>1</gamesPlayed>
+    <gamesWon>0</gamesWon>
+  </User>
+  <User>
+    <username>alex</username>
+    <avatarImage>pack://application:,,,/PairGameApplication;component/Assets/AvatarImages/avatar4.png</avatarImage>
+    <gamesPlayed>2</gamesPlayed>
+    <gamesWon>0</gamesWon>
+  </User>
+  <User>
+    <username>claudiu</username>
+    <avatarImage>pack://application:,,,/PairGameApplication;component/Assets/AvatarImages/avatar2.png</avatarImage>
+    <gamesPlayed>1</gamesPlayed>
+    <gamesWon>0</gamesWon>
+  </User>
+  <User>
+    <username>sabina</username>
+    <avatarImage>pack://application:,,,/PairGameApplication;component/Assets/AvatarImages/avatar4.png</avatarImage>
+    <gamesPlayed>1</gamesPlayed>
+    <gamesWon>0</gamesWon>
+  </User>
+  <User>
+    <username>vladxx</username>
+    <avatarImage>pack://application:,,,/PairGameApplication;component/Assets/AvatarImages/avatar4.png</avatarImage>
+    <gamesPlayed>2</gamesPlayed>
+    <gamesWon>0</gamesWon>
+  </User>
+</ArrayOfUser>

@@ -1,0 +1,56 @@
+﻿<Page x:Class="PairGameApplication.GamePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PairGameApplication"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="GamePage">
+    <Page.DataContext>
+        <local:PairGame />
+    </Page.DataContext>
+
+    <Grid>
+
+        <Menu>
+            <MenuItem Header="File">
+                <MenuItem Header="New game" Name="newGameButton" Click="newGameButton_Click"/>
+                <MenuItem Header="Open game" Click="openGame_Click"/>
+                <MenuItem Header="Save game" Click="saveGame_Click"/>
+                <MenuItem Header="Exit" Name="exitButton" Click="exitButton_Click"/>
+            </MenuItem>
+            <MenuItem Header="Help" Click="help_Click">
+            </MenuItem>
+        </Menu>
+
+        <Grid Margin="10,0,0,0">
+            <ItemsControl ItemsSource="{Binding Cards}" Margin="210,120,210,10" Name="gameBoard">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Rows="{Binding Path=Height, ElementName=pairGame}" Columns="{Binding Path=Width, ElementName=pairGame}" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button Click="Card_Click" x:Name="cardButton">
+                            <Button.Content>
+                                <Image Source="{Binding Image}" />
+                            </Button.Content>
+                        </Button>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+
+        </Grid>
+        <Button Content="Start" HorizontalAlignment="Left" Margin="223,63,0,0" VerticalAlignment="Top" Click="StartButton_Click" Height="25" Width="137" Name="startButton"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="397,3,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  Name="levelLabel"/>
+        <Label Content="Current level:" HorizontalAlignment="Left" Margin="320,3,0,0" VerticalAlignment="Top" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  Name="currentLevelLabel"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="575,30,0,0" VerticalAlignment="Top" Width="100" Name="usernameLabel" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Time: " HorizontalAlignment="Left" Margin="400,63,0,0" VerticalAlignment="Top" Width="70" Name="timeLabel" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="25"/>
+        <Label Content="Content" HorizontalAlignment="Left" Margin="475,63,0,0" VerticalAlignment="Top" Width="50" Name="elapsedTimeLabel" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="25"/>
+
+        <Image HorizontalAlignment="Left" Height="62" Margin="675,25,0,0" VerticalAlignment="Top" Width="79" Name="userImage"/>
+    </Grid>
+</Page>

@@ -1,0 +1,36 @@
+﻿<Page x:Class="PairGameApplication.MenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PairGameApplication"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MenuPage">
+
+    <Grid>
+        <Menu>
+            <MenuItem Header="File">
+                <MenuItem Header="Open game" Click="OpenGame_Click"/>
+                <MenuItem Header="Statistics" Click="statistic_Click"/>
+                <MenuItem Header="Exit" Name="exitButton" Click="exitButton_Click"/>
+            </MenuItem>
+            <MenuItem Header="Help" Click="help_Click">
+            </MenuItem>
+          
+
+        </Menu>
+        <ComboBox Name="options" Margin="258,155,258,225" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem>Standard</ComboBoxItem>
+            <ComboBoxItem>Custom</ComboBoxItem>
+        </ComboBox>
+
+        <Label Name="usernameLabel"  Content="Label" HorizontalAlignment="Left" Margin="515,45,0,0" VerticalAlignment="Top" Width="155" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Image Name="userImage" HorizontalAlignment="Left" Height="56" Margin="670,28,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label  FontSize="20"  Content="Select game type" HorizontalAlignment="Center" Margin="0,95,0,0" VerticalAlignment="Top" Width="382" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Current game dimension: " HorizontalAlignment="Left" Margin="258,257,0,0" VerticalAlignment="Top" Width="142" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Name="dimensionsLabel"  Content="" HorizontalAlignment="Left" Margin="405,257,0,0" VerticalAlignment="Top" Width="137" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0.511,0.193"/>
+        <Button Content="Start new game" Margin="258,340,258,0" Height="28" VerticalAlignment="Top" Click="newGameButton_Click"/>
+
+    </Grid>
+</Page>
